@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azfa Septi Saumi — XI TKJ 1</title>
+<meta name="author" content="Azfa Septi Saumi">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23f97316'/%3E%3Ctext x='50' y='68' font-size='60' font-weight='700' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{font-family:'Inter',sans-serif}html{scroll-behavior:smooth}body{background:#09090b;color:#fff;overflow-x:hidden}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#09090b}::-webkit-scrollbar-thumb{background:#f97316;border-radius:999px}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeInRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes pulse-glow{0%,100%{box-shadow:0 0 20px rgba(249,115,22,0.3)}50%{box-shadow:0 0 40px rgba(249,115,22,0.6),0 0 80px rgba(249,115,22,0.2)}}
+@keyframes spin-slow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes gradient-shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes particle-float{0%{transform:translateY(0) translateX(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-100vh) translateX(50px);opacity:0}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes orbit{from{transform:rotate(0deg) translateX(120px) rotate(0deg)}to{transform:rotate(360deg) translateX(120px) rotate(-360deg)}}
+@keyframes orbit2{from{transform:rotate(120deg) translateX(160px) rotate(-120deg)}to{transform:rotate(480deg) translateX(160px) rotate(-480deg)}}
+@keyframes orbit3{from{transform:rotate(240deg) translateX(200px) rotate(-240deg)}to{transform:rotate(600deg) translateX(200px) rotate(-600deg)}}
+@keyframes badge-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes ig-gradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes photo-entrance{0%{transform:scale(0.5) rotate(-10deg);opacity:0}60%{transform:scale(1.08) rotate(2deg);opacity:1}100%{transform:scale(1) rotate(0deg);opacity:1}}
+.a-fiu{animation:fadeInUp .8s ease-out forwards}.a-fil{animation:fadeInLeft .8s ease-out forwards}.a-fir{animation:fadeInRight .8s ease-out forwards}
+.a-pg{animation:pulse-glow 3s ease-in-out infinite}.a-ss{animation:spin-slow 20s linear infinite}.a-o1{animation:orbit 8s linear infinite}.a-o2{animation:orbit2 12s linear infinite}.a-o3{animation:orbit3 16s linear infinite}.a-pe{animation:photo-entrance 1s ease-out forwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.4s}.d5{animation-delay:.5s}.d7{animation-delay:.7s}
+.o0{opacity:0}
+.glass{background:rgba(24,24,27,0.6);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.08)}
+.glass-s{background:rgba(24,24,27,0.85);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1)}
+.shim{background:linear-gradient(90deg,#f97316,#fb923c,#fbbf24,#f97316);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 3s linear infinite}
+.gb{position:relative}.gb::before{content:'';position:absolute;inset:-2px;border-radius:inherit;background:linear-gradient(135deg,#f97316,#fb923c,#fbbf24,#f97316);background-size:300% 300%;animation:gradient-shift 4s ease infinite;z-index:-1}
+.ps{min-height:100vh;position:relative}
+.nl.active{color:#f97316}.nl.active::after{content:'';position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:#f97316}
+.pu{width:220px;height:220px;border-radius:50%;border:3px solid #f97316;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .4s ease;position:relative;overflow:hidden;background:rgba(24,24,27,0.6)}
+.pu:hover{border-color:#fb923c;box-shadow:0 0 40px rgba(249,115,22,0.4);transform:scale(1.05)}
+.pu img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.pu .ov{position:absolute;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;border-radius:50%}
+.pu:hover .ov{opacity:1}
+.gc{transition:all .5s cubic-bezier(.4,0,.2,1)}.gc:hover{transform:translateY(-12px) scale(1.02);box-shadow:0 25px 50px -12px rgba(249,115,22,0.25)}.gc:hover .gi{transform:scale(1.1)}.gi{transition:transform .7s ease}
+.pt{position:absolute;width:4px;height:4px;background:#f97316;border-radius:50%;opacity:0;animation:particle-float linear infinite}
+.igf:focus{outline:none;border-color:#f97316;box-shadow:0 0 20px rgba(249,115,22,0.2)}
+.toast{position:fixed;bottom:30px;right:30px;padding:16px 24px;border-radius:12px;z-index:9999;transform:translateY(100px);opacity:0;transition:all .4s ease}.toast.show{transform:translateY(0);opacity:1}
+.rv{opacity:0;transform:translateY(30px);transition:all .8s ease}.rv.vis{opacity:1;transform:translateY(0)}
+.orb-sys{position:relative;width:300px;height:300px}.orb-r{position:absolute;border:1px solid rgba(249,115,22,0.15);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+.orb1{width:240px;height:240px}.orb2{width:320px;height:320px}.orb3{width:400px;height:400px}
+.sbf{height:100%;border-radius:999px;background:linear-gradient(90deg,#f97316,#fb923c);transition:width 1.5s ease;width:0}.sbf.an{width:var(--tw)}
+.gb-pulse{animation:badge-pulse 2s ease-in-out infinite}
+.ig-g{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);background-size:200% 200%;animation:ig-gradient 3s ease infinite}.ig-g:hover{opacity:.9}
+.pfr{position:absolute;inset:-6px;border-radius:50%;background:conic-gradient(from 0deg,#f97316,#fb923c,#fbbf24,#f97316);animation:spin-slow 8s linear infinite;z-index:-1}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 h-16 glass-s" style="border-bottom:1px solid rgba(255,255,255,0.06)">
+<div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+<a href="#home" class="flex items-center gap-3 group">
+<div class="w-9 h-9 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center font-bold text-sm group-hover:scale-110 transition-transform">A</div>
+<span class="font-semibold text-sm tracking-tight">Azfa Septi<span class="text-orange-500">.</span></span>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a href="#home" class="nl relative text-sm font-medium text-zinc-400 hover:text-white transition-colors active">Home</a>
+<a href="#games" class="nl relative text-sm font-medium text-zinc-400 hover:text-white transition-colors">Games</a>
+<a href="#social" class="nl relative text-sm font-medium text-zinc-400 hover:text-white transition-colors">Social</a>
+<a href="#special" class="nl relative text-sm font-medium text-zinc-400 hover:text-white transition-colors">Special</a>
+</div>
+<button id="mb" class="md:hidden text-zinc-400 hover:text-white"><i data-lucide="menu" class="w-6 h-6"></i></button>
+</div>
+<div id="mm" class="md:hidden hidden glass-s absolute top-16 left-0 right-0 py-4 px-6 space-y-4" style="border-bottom:1px solid rgba(255,255,255,0.06)">
+<a href="#home" class="block text-sm font-medium text-zinc-400 hover:text-orange-500">Home</a>
+<a href="#games" class="block text-sm font-medium text-zinc-400 hover:text-orange-500">Games</a>
+<a href="#social" class="block text-sm font-medium text-zinc-400 hover:text-orange-500">Social</a>
+<a href="#special" class="block text-sm font-medium text-zinc-400 hover:text-orange-500">Special</a>
+</div>
+</nav>
+
+<!-- PAGE 1 -->
+<section id="home" class="ps flex items-center justify-center relative overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full" style="background:rgba(249,115,22,0.05);filter:blur(120px)"></div>
+<div id="ptc" class="absolute inset-0 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 py-24 flex flex-col lg:flex-row items-center gap-16 relative z-10">
+<div class="flex-1 text-center lg:text-left">
+<div class="o0 a-fil"><span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-medium text-orange-400 mb-6"><span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>Welcome to my world</span></div>
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-none o0 a-fil d1">
+<span class="block text-white">Halo, saya</span>
+<span class="block mt-2 shim">Azfa Septi Saumi</span>
+</h1>
+<div class="mt-6 o0 a-fil d2"><p class="text-lg md:text-xl text-zinc-400 leading-relaxed max-w-lg mx-auto lg:mx-0">Siswa kelas <span class="text-orange-500 font-semibold">XI TKJ 1</span> — seorang gamer dan penggemar teknologi yang selalu antusias mempelajari hal baru.</p></div>
+<div class="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start o0 a-fil d3">
+<a href="#games" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-orange-500 text-white font-semibold text-sm hover:bg-orange-600 transition-all hover:shadow-lg hover:shadow-orange-500/25 active:scale-95"><i data-lucide="gamepad-2" class="w-4 h-4"></i>Lihat Game Saya</a>
+<a href="#social" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl glass text-white font-semibold text-sm hover:bg-white/5 transition-all active:scale-95"><i data-lucide="instagram" class="w-4 h-4"></i>Instagram</a>
+</div>
+<div class="mt-12 flex gap-8 justify-center lg:justify-start o0 a-fil d4">
+<div><div class="text-2xl font-bold text-white">XI</div><div class="text-xs text-zinc-500 mt-1">Kelas</div></div>
+<div class="w-px bg-zinc-800"></div>
+<div><div class="text-2xl font-bold text-white">TKJ 1</div><div class="text-xs text-zinc-500 mt-1">Jurusan</div></div>
+<div class="w-px bg-zinc-800"></div>
+<div><div class="text-2xl font-bold text-orange-500">2</div><div class="text-xs text-zinc-500 mt-1">Game Fav</div></div>
+</div>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-6 o0 a-fir d3">
+<div class="relative">
+<div class="absolute -inset-8 rounded-full border border-orange-500/10 a-ss"></div>
+<div class="absolute -inset-16 rounded-full border border-orange-500/5" style="animation:spin-slow 30s linear infinite reverse"></div>
+<div class="pfr"></div>
+<div class="pu a-pg a-pe" id="pu" onclick="document.getElementById('fi').click()">
+<img id="fp" src="https://z-cdn-media.chatglm.cn/files/a77814e0-a479-4468-af69-9081f06a4c89.jpeg?auth_key=1881601376-661b441dc25a41d3ba8b063a069e879a-0-55e07fc2ac03c164f4911e0654c7812c" alt="Azfa">
+<div class="ov"><div class="flex flex-col items-center gap-1"><i data-lucide="camera" class="w-6 h-6 text-white"></i><span class="text-white text-xs font-medium">Ganti Foto</span></div></div>
+</div>
+<input type="file" id="fi" accept="image/*" class="hidden" onchange="upFoto(event)">
+</div>
+<div class="text-center"><p class="text-sm text-zinc-400 font-medium">Azfa Septi Saumi</p><p class="text-xs text-zinc-600 mt-1">Klik foto untuk mengganti</p></div>
+</div>
+</div>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 o0 a-fiu d7"><span class="text-xs text-zinc-600">Scroll down</span><div class="w-5 h-8 rounded-full border border-zinc-700 flex items-start justify-center p-1"><div class="w-1 h-2 rounded-full bg-orange-500 animate-bounce"></div></div></div>
+</section>
+
+<!-- PAGE 2: GAMES -->
+<section id="games" class="ps relative overflow-hidden py-24">
+<div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full" style="background:rgba(249,115,22,0.04);filter:blur(120px)"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="text-center mb-16 rv">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-medium text-orange-400 mb-4"><i data-lucide="gamepad-2" class="w-3 h-3"></i>My Favorite Games</span>
+<h2 class="text-3xl md:text-5xl font-bold tracking-tight mt-4">Game yang Saya <span class="text-orange-500">Mainkan</span></h2>
+<p class="text-zinc-400 mt-4 max-w-md mx-auto">Dua game favorit yang menemani waktu luang saya!</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+<!-- FC Mobile -->
+<div class="gc glass rounded-2xl overflow-hidden rv">
+<div class="relative h-64 overflow-hidden">
+<img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=800&h=500&fit=crop&crop=center" alt="FC Mobile" class="gi w-full h-full object-cover">
+<div class="absolute inset-0" style="background:linear-gradient(to top,rgba(9,9,11,0.98),rgba(9,9,11,0.4),rgba(9,9,11,0.2))"></div>
+<div class="absolute top-4 left-4 flex items-center gap-2">
+<div class="gb-pulse px-3 py-1.5 rounded-lg bg-green-600/90 text-white text-xs font-bold flex items-center gap-1.5 shadow-lg shadow-green-600/30">⚽ FC MOBILE</div>
+<span class="px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-xs font-semibold border border-orange-500/20 backdrop-blur-sm">Ranked</span>
+</div>
+<div class="absolute bottom-4 left-4"><h3 class="text-2xl font-bold">FC Mobile</h3><p class="text-zinc-400 text-sm mt-1">EA Sports FC™ Mobile</p></div>
+</div>
+<div class="p-6">
+<p class="text-zinc-400 text-sm leading-relaxed mb-4">Game sepak bola mobile terbaik! Bangun tim impian, mainkan mode VS Attack dan Head to Head yang seru.</p>
+<div class="space-y-3 mb-5">
+<div class="flex items-center justify-between text-sm"><span class="text-zinc-500 flex items-center gap-2"><i data-lucide="trophy" class="w-3.5 h-3.5 text-orange-500"></i>Skill</span><span class="text-orange-400 font-semibold">Advanced</span></div>
+<div class="w-full h-2 rounded-full bg-zinc-800"><div class="sbf" style="--tw:75%"></div></div>
+<div class="flex items-center justify-between text-sm"><span class="text-zinc-500 flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5 text-orange-500"></i>Playtime</span><span class="text-zinc-300 font-medium">500+ Jam</span></div>
+<div class="flex items-center justify-between text-sm"><span class="text-zinc-500 flex items-center gap-2"><i data-lucide="users" class="w-3.5 h-3.5 text-orange-500"></i>Mode</span><span class="text-zinc-300 font-medium">VS Attack</span></div>
+</div>
+<div class="flex gap-2 flex-wrap"><span class="px-3 py-1 rounded-lg bg-zinc-800 text-zinc-400 text-xs">⚽ Football</span><span class="px-3 py-1 rounded-lg bg-zinc-800 text-zinc-400 text-xs">🏆 Competitive</span><span class="px-3 py-1 rounded-lg bg-zinc-800 text-zinc-400 text-xs">👥 Multiplayer</span></div>
+</div>
+</div>
+<!-- MLBB -->
+<div class="gc glass rounded-2xl overflow-hidden rv">
+<div class="relative h-64 overflow-hidden">
+<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=500&fit=crop&crop=center" alt="Mobile Legends" class="gi w-full h-full object-cover">
+<div class="absolute inset-0" style="background:linear-gradient(to top,rgba(9,9,11,0.98),rgba(9,9,11,0.4),rgba(9,9,11,0.2))"></div>
+<div class="absolute top-4 left-4 flex items-center gap-2">
+<div class="gb-pulse px-3 py-1.5 rounded-lg bg-blue-600/90 text-white text-xs font-bold flex items-center gap-1.5 shadow-lg shadow-blue-600/30">⚔️ MOBILE LEGENDS</div>
+<span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs font-semibold border border-purple-500/20 backdrop-blur-sm">5v5 MOBA</span>
+</div>
+<div class="absolute bottom-4 left-4"><h3 class="text-2xl font-bold">Mobile Legends</h3><p class="text-zinc-400 text-sm mt-1">Bang Bang</p></div>
+</div>
+<div class="p-6">
+<p class="text-zinc-400 text-sm leading-relaxed mb-4">MOBA mobile paling populer! Pilih hero favoritmu, bertarung 5v5 real-time. Push rank sampai Mythic Glory!</p>
+<div class="space-y-3 mb-5">
+<div class="flex items-center justify-between text-sm"><span class="text-zinc-500 flex items-center gap-2"><i data-lucide="trophy" class="w-3.5 h-3.5 text-orange-500"></i>Rank</span><span class="text-orange-400 font-semibold">Mythic</span></div>
+<div class="w-full h-2 rounded-full bg-zinc-800"><div class="sbf" style="--tw:85%"></div></div>
+<div class="flex items-center justify-between text-sm"><span class="text-zinc-500 flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5 text-orange-500"></i>Playtime</span><span class="text-zinc-300 font-medium">1000+ Jam</span></div>
+<div class="flex items-center justify-between text-sm"><span class="text-zinc-500 flex items-center gap-2"><i data-lucide="swords" class="w-3.5 h-3.5 text-orange-500"></i>Role</span><span class="text-zinc-300 font-medium">Assassin / Mage</span></div>
+</div>
+<div class="flex gap-2 flex-wrap"><span class="px-3 py-1 rounded-lg bg-zinc-800 text-zinc-400 text-xs">⚔️ MOBA</span><span class="px-3 py-1 rounded-lg bg-zinc-800 text-zinc-400 text-xs">👥 5v5</span><span class="px-3 py-1 rounded-lg bg-zinc-800 text-zinc-400 text-xs">🏆 Ranked</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PAGE 3: INSTAGRAM -->
+<section id="social" class="ps relative overflow-hidden py-24 flex items-center">
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[500px] rounded-full" style="background:rgba(249,115,22,0.04);filter:blur(120px)"></div>
+<div class="absolute top-20 right-10 w-[300px] h-[300px] rounded-full" style="background:rgba(225,48,108,0.06);filter:blur(100px)"></div>
+<div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="rv">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-medium text-pink-400 mb-6"><i data-lucide="instagram" class="w-3 h-3"></i>My Instagram</span>
+<h2 class="text-3xl md:text-5xl font-bold tracking-tight mt-4">Follow <span class="shim">Instagram</span> Saya</h2>
+<p class="text-zinc-400 mt-4 leading-relaxed max-w-md">Klik tombol di bawah untuk langsung buka Instagram saya!</p>
+<div class="mt-8 max-w-md">
+<label class="text-sm font-medium text-zinc-300 mb-2 block">Username Instagram</label>
+<div class="relative"><span class="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500 text-sm font-medium">@</span>
+<input type="text" id="igi" value="oghoggh" class="igf w-full pl-9 pr-4 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm placeholder-zinc-600 transition-all"></div>
+<button onclick="upIG()" class="mt-3 w-full px-6 py-3 rounded-xl bg-orange-500 text-white font-semibold text-sm hover:bg-orange-600 transition-all active:scale-95 flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4"></i>Simpan</button>
+</div>
+<div class="mt-8 max-w-md space-y-3">
+<a id="iga" href="instagram://user?username=oghoggh" onclick="igClk(event)" class="w-full py-4 rounded-xl ig-g text-white font-bold text-base flex items-center justify-center gap-3 hover:scale-[1.02] transition-all active:scale-95 shadow-lg shadow-pink-500/20">
+<svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+Buka di App Instagram</a>
+<a id="igw" href="https://instagram.com/oghoggh" target="_blank" class="w-full py-4 rounded-xl glass text-white font-bold text-base flex items-center justify-center gap-3 hover:bg-white/10 transition-all active:scale-95 border border-zinc-700"><i data-lucide="globe" class="w-5 h-5 text-zinc-400"></i>Buka di Browser</a>
+<button onclick="cpIG()" class="w-full py-3.5 rounded-xl bg-zinc-800/50 text-zinc-400 font-semibold text-sm flex items-center justify-center gap-2 hover:bg-zinc-800 hover:text-white transition-all active:scale-95"><i data-lucide="copy" class="w-4 h-4"></i><span id="cpt">Salin Link</span></button>
+</div>
+<div class="mt-6 max-w-md"><div class="glass rounded-xl p-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full ig-g flex items-center justify-center flex-shrink-0"><i data-lucide="link" class="w-4 h-4 text-white"></i></div>
+<div class="min-w-0 flex-1"><p class="text-xs text-zinc-500 mb-0.5">Link Instagram</p><p id="igld" class="text-sm text-orange-400 font-medium truncate">instagram.com/oghoggh</p></div>
+<div class="w-2 h-2 rounded-full bg-green-500 animate-pulse flex-shrink-0"></div>
+</div></div>
+</div>
+<!-- IG Card -->
+<div class="flex justify-center rv">
+<div class="w-full max-w-sm"><div class="glass rounded-3xl p-6 gb" style="z-index:1">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 p-0.5"><div class="w-full h-full rounded-full bg-zinc-900 overflow-hidden"><img id="iav" src="https://z-cdn-media.chatglm.cn/files/a77814e0-a479-4468-af69-9081f06a4c89.jpeg?auth_key=1881601376-661b441dc25a41d3ba8b063a069e879a-0-55e07fc2ac03c164f4911e0654c7812c" class="w-full h-full object-cover" alt=""></div></div>
+<div class="flex-1"><p class="font-semibold text-white">Azfa Septi Saumi</p><p class="text-sm text-zinc-500" id="igun">@oghoggh</p></div>
+<div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-3 h-3 text-white"></i></div>
+</div>
+<div class="grid grid-cols-3 gap-4 mb-6 py-4 border-y border-zinc-800">
+<div class="text-center"><p class="text-lg font-bold text-white">42</p><p class="text-xs text-zinc-500">Posts</p></div>
+<div class="text-center"><p class="text-lg font-bold text-white">1.2K</p><p class="text-xs text-zinc-500">Followers</p></div>
+<div class="text-center"><p class="text-lg font-bold text-white">350</p><p class="text-xs text-zinc-500">Following</p></div>
+</div>
+<div class="mb-5"><p class="text-sm text-zinc-300 font-medium">🎮 Azfa Septi Saumi</p><p class="text-sm text-zinc-400 mt-1">⚽ Football | 📱 TKJ Student | ⚔️ Gamer</p><p class="text-sm text-blue-400 mt-1" id="igbl">instagram.com/oghoggh</p></div>
+<div class="grid grid-cols-5 gap-2 mb-5">
+<button onclick="opIG()" class="col-span-3 py-2.5 rounded-lg ig-g text-white font-semibold text-sm hover:opacity-90 transition-all active:scale-95">Follow</button>
+<button onclick="opIG()" class="col-span-2 py-2.5 rounded-lg glass text-white font-semibold text-sm hover:bg-white/10 transition-all active:scale-95">Message</button>
+</div>
+<div class="grid grid-cols-3 gap-1.5">
+<div class="aspect-square rounded-lg overflow-hidden"><img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=300&h=300&fit=crop" class="w-full h-full object-cover hover:scale-110 transition-transform" alt=""></div>
+<div class="aspect-square rounded-lg overflow-hidden"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&h=300&fit=crop" class="w-full h-full object-cover hover:scale-110 transition-transform" alt=""></div>
+<div class="aspect-square rounded-lg overflow-hidden"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=300&fit=crop" class="w-full h-full object-cover hover:scale-110 transition-transform" alt=""></div>
+<div class="aspect-square rounded-lg overflow-hidden"><img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=300&h=300&fit=crop" class="w-full h-full object-cover hover:scale-110 transition-transform" alt=""></div>
+<div class="aspect-square rounded-lg overflow-hidden"><img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=300&h=300&fit=crop" class="w-full h-full object-cover hover:scale-110 transition-transform" alt=""></div>
+<div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer" onclick="opIG()"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=300&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform" alt=""><div class="absolute inset-0 bg-black/60 flex items-center justify-center"><span class="text-white font-bold text-sm">+36</span></div></div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PAGE 4: SPECIAL -->
+<section id="special" class="ps relative overflow-hidden py-24">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] rounded-full" style="background:rgba(249,115,22,0.06);filter:blur(120px)"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="text-center mb-20 rv">
+<div class="inline-block mb-6"><div class="orb-sys mx-auto"><div class="orb-r orb1"></div><div class="orb-r orb2"></div><div class="orb-r orb3"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg shadow-orange-500/30 z-10 overflow-hidden"><img src="https://z-cdn-media.chatglm.cn/files/a77814e0-a479-4468-af69-9081f06a4c89.jpeg?auth_key=1881601376-661b441dc25a41d3ba8b063a069e879a-0-55e07fc2ac03c164f4911e0654c7812c" class="w-full h-full object-cover" alt=""></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><div class="a-o1"><div class="w-10 h-10 rounded-xl glass flex items-center justify-center"><i data-lucide="gamepad-2" class="w-5 h-5 text-orange-400"></i></div></div></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><div class="a-o2"><div class="w-10 h-10 rounded-xl glass flex items-center justify-center"><i data-lucide="code-2" class="w-5 h-5 text-orange-400"></i></div></div></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"><div class="a-o3"><div class="w-10 h-10 rounded-xl glass flex items-center justify-center"><i data-lucide="wifi" class="w-5 h-5 text-orange-400"></i></div></div></div>
+</div></div>
+<h2 class="text-3xl md:text-6xl font-bold tracking-tight leading-tight max-w-3xl mx-auto">"Jadilah <span class="shim">versi terbaik</span> dari dirimu sendiri"</h2>
+<p class="text-zinc-500 mt-4 text-sm">— Azfa Septi Saumi</p>
+</div>
+<div class="grid md:grid-cols-3 gap-6 mb-16">
+<div class="glass rounded-2xl p-8 hover:bg-white/5 transition-all group rv"><div class="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center mb-5 group-hover:bg-orange-500/20 transition-colors"><i data-lucide="graduation-cap" class="w-7 h-7 text-orange-500"></i></div><h3 class="text-lg font-semibold mb-2">Pelajar TKJ</h3><p class="text-zinc-400 text-sm leading-relaxed">Belajar networking, server, dan infrastruktur IT.</p></div>
+<div class="glass rounded-2xl p-8 hover:bg-white/5 transition-all group rv"><div class="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center mb-5 group-hover:bg-orange-500/20 transition-colors"><i data-lucide="swords" class="w-7 h-7 text-orange-500"></i></div><h3 class="text-lg font-semibold mb-2">Competitive Gamer</h3><p class="text-zinc-400 text-sm leading-relaxed">Melatih strategi, kerja tim, dan mental kompetitif.</p></div>
+<div class="glass rounded-2xl p-8 hover:bg-white/5 transition-all group rv"><div class="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center mb-5 group-hover:bg-orange-500/20 transition-colors"><i data-lucide="rocket" class="w-7 h-7 text-orange-500"></i></div><h3 class="text-lg font-semibold mb-2">Future Builder</h3><p class="text-zinc-400 text-sm leading-relaxed">Terus belajar dan beradaptasi untuk masa depan cerah.</p></div>
+</div>
+<div class="max-w-2xl mx-auto mb-16 rv">
+<h3 class="text-2xl font-bold text-center mb-10"><span class="text-orange-500">Perjalanan</span> Saya</h3>
+<div class="relative"><div class="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-orange-500 via-orange-500/50 to-transparent"></div>
+<div class="space-y-8">
+<div class="flex gap-6 items-start group"><div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 text-sm font-bold group-hover:scale-110 transition-transform z-10">🎓</div><div><p class="text-xs text-orange-400 font-medium mb-1">Sekarang</p><h4 class="font-semibold">Kelas XI TKJ 1</h4><p class="text-zinc-400 text-sm mt-1">Teknik Komputer dan Jaringan</p></div></div>
+<div class="flex gap-6 items-start group"><div class="w-12 h-12 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center flex-shrink-0 text-sm font-bold group-hover:scale-110 transition-transform z-10">⚽</div><div><p class="text-xs text-zinc-500 font-medium mb-1">Hobi</p><h4 class="font-semibold">FC Mobile Player</h4><p class="text-zinc-400 text-sm mt-1">Fall in love dengan game sepak bola</p></div></div>
+<div class="flex gap-6 items-start group"><div class="w-12 h-12 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center flex-shrink-0 text-sm font-bold group-hover:scale-110 transition-transform z-10">⚔️</div><div><p class="text-xs text-zinc-500 font-medium mb-1">Favorit</p><h4 class="font-semibold">Mobile Legends</h4><p class="text-zinc-400 text-sm mt-1">Push rank sampai Mythic</p></div></div>
+<div class="flex gap-6 items-start group"><div class="w-12 h-12 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center flex-shrink-0 text-sm font-bold group-hover:scale-110 transition-transform z-10">🚀</div><div><p class="text-xs text-zinc-500 font-medium mb-1">Masa Depan</p><h4 class="font-semibold">Terus Berkembang</h4><p class="text-zinc-400 text-sm mt-1">Profesional di IT dan gaming</p></div></div>
+</div></div>
+</div>
+<div class="glass rounded-3xl p-8 md:p-12 text-center max-w-3xl mx-auto rv gb" style="z-index:1">
+<div class="text-5xl mb-6">🎮</div><h3 class="text-2xl md:text-3xl font-bold mb-4">Mau main bareng?</h3>
+<p class="text-zinc-400 text-sm md:text-base mb-8 max-w-md mx-auto">Klik tombol di bawah!</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+<button onclick="chkOn()" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-orange-500 text-white font-semibold hover:bg-orange-600 transition-all active:scale-95 hover:shadow-lg hover:shadow-orange-500/25"><i data-lucide="wifi" class="w-4 h-4"></i>Cek Status</button>
+<button onclick="schM()" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl glass text-white font-semibold hover:bg-white/5 transition-all active:scale-95"><i data-lucide="calendar" class="w-4 h-4"></i>Jadwal Main</button>
+</div>
+<div id="stD" class="hidden"><div class="glass rounded-xl p-6 text-left"><div id="stC"></div></div></div>
+</div>
+<footer class="mt-24 text-center pb-8 rv">
+<div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center mx-auto mb-6 overflow-hidden shadow-lg shadow-orange-500/20"><img src="https://z-cdn-media.chatglm.cn/files/a77814e0-a479-4468-af69-9081f06a4c89.jpeg?auth_key=1881601376-661b441dc25a41d3ba8b063a069e879a-0-55e07fc2ac03c164f4911e0654c7812c" class="w-full h-full object-cover" alt=""></div>
+<h4 class="text-xl font-bold">Azfa Septi Saumi</h4><p class="text-zinc-600 text-xs mt-1">XI TKJ 1 — Gamer — Future IT Professional</p>
+<div class="flex justify-center gap-6 mt-6">
+<a id="figl" href="https://instagram.com/oghoggh" target="_blank" class="w-10 h-10 rounded-full glass flex items-center justify-center text-zinc-400 hover:text-pink-500 hover:bg-pink-500/10 transition-all"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+<a href="#games" class="w-10 h-10 rounded-full glass flex items-center justify-center text-zinc-400 hover:text-orange-500 hover:bg-orange-500/10 transition-all"><i data-lucide="gamepad-2" class="w-4 h-4"></i></a>
+<a href="#home" class="w-10 h-10 rounded-full glass flex items-center justify-center text-zinc-400 hover:text-orange-500 hover:bg-orange-500/10 transition-all"><i data-lucide="home" class="w-4 h-4"></i></a>
+</div>
+<div class="mt-8 pt-6 border-t border-zinc-800/50"><p class="text-xs text-zinc-600">© 2024 Azfa Septi Saumi — Dibuat dengan ❤️</p></div>
+</footer>
+</div>
+</section>
+
+<!-- TOAST -->
+<div id="tst" class="toast glass-s"><div class="flex items-center gap-3"><div id="tsi" class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-4 h-4 text-green-400"></i></div><div><p id="tst1" class="text-sm font-semibold text-white">OK</p><p id="tst2" class="text-xs text-zinc-400 mt-0.5"></p></div></div></div>
+
+<script>
+lucide.createIcons();
+let ig='oghoggh';
+function upFoto(e){const f=e.target.files[0];if(!f)return;if(f.size>5*1024*1024){tst('Gagal!','File terlalu besar','e');return}const r=new FileReader();r.onload=function(x){document.getElementById('fp').src=x.target.result;document.getElementById('iav').src=x.target.result;tst('Foto diupload!','Berhasil diperbarui')};r.readAsDataURL(f)}
+function upIG(){const u=document.getElementById('igi').value.trim().replace('@','').replace(/\s/g,'');if(!u){tst('Gagal!','Username kosong','e');return}ig=u;document.getElementById('igun').textContent='@'+u;document.getElementById('igbl').textContent='instagram.com/'+u;document.getElementById('igld').textContent='instagram.com/'+u;document.getElementById('iga').href='instagram://user?username='+u;document.getElementById('igw').href='https://instagram.com/'+u;document.getElementById('figl').href='https://instagram.com/'+u;tst('Tersimpan! ✨','@'+u)}
+function opIG(){const a='instagram://user?username='+ig,w='https://instagram.com/'+ig;if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){window.location.href=a;setTimeout(()=>window.open(w,'_blank'),1500)}else window.open(w,'_blank')}
+function igClk(e){e.preventDefault();opIG()}
+function cpIG(){const l='https://instagram.com/'+ig;navigator.clipboard.writeText(l).then(()=>{document.getElementById('cpt').textContent='Tersalin! ✓';tst('Disalin!',l);setTimeout(()=>document.getElementById('cpt').textContent='Salin Link',2000)}).catch(()=>{const t=document.createElement('textarea');t.value=l;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);document.getElementById('cpt').textContent='Tersalin! ✓';tst('Disalin!',l);setTimeout(()=>document.getElementById('cpt').textContent='Salin Link',2000)})}
+function tst(t,m,e){const ts=document.getElementById('tst'),i=document.getElementById('tsi');document.getElementById('tst1').textContent=t;document.getElementById('tst2').textContent=m;if(e){i.className='w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0';i.innerHTML='<svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>'}else{i.className='w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0';i.innerHTML='<svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>'}ts.classList.add('show');setTimeout(()=>ts.classList.remove('show'),3000)}
+function chkOn(){const d=document.getElementById('stD'),c=document.getElementById('stC'),s=[{g:'⚽ FC Mobile',s:'Online',c:'g'},{g:'⚔️ Mobile Legends',s:'Offline',c:'r'},{g:'💬 Discord',s:'Online',c:'g'}];let h='<div class="space-y-3">';s.forEach(x=>{const dc=x.c==='g'?'bg-green-500':'bg-red-500',tc=x.c==='g'?'text-green-400':'text-red-400';h+=`<div class="flex items-center justify-between py-2"><span class="text-sm text-zinc-300 font-medium">${x.g}</span><span class="flex items-center gap-2 text-xs font-medium ${tc}"><span class="w-2 h-2 rounded-full ${dc} ${x.c==='g'?'animate-pulse':''}"></span>${x.s}</span></div>`});h+='</div>';c.innerHTML=h;d.classList.remove('hidden');d.style.animation='fadeInUp .5s ease'}
+function schM(){const d=document.getElementById('stD'),c=document.getElementById('stC'),sc=[{d:'Senin-Jumat',t:'19:00-22:00',g:'FC Mobile / MLBB'},{d:'Sabtu',t:'14:00-23:00',g:'Marathon MLBB'},{d:'Minggu',t:'10:00-22:00',g:'FC Mobile Ranked'}];let h='<div class="space-y-4">';sc.forEach(x=>{h+=`<div class="flex items-start gap-4 py-2"><div class="w-2 h-2 rounded-full bg-orange-500 mt-2 flex-shrink-0"></div><div><p class="text-sm font-semibold text-white">${x.d}</p><p class="text-xs text-orange-400 font-medium">${x.t}</p><p class="text-xs text-zinc-500 mt-0.5">${x.g}</p></div></div>`});h+='</div>';c.innerHTML=h;d.classList.remove('hidden');d.style.animation='fadeInUp .5s ease'}
+const nls=document.querySelectorAll('.nl'),scs=document.querySelectorAll('.ps');
+function uNav(){let c='';scs.forEach(s=>{if(window.scrollY>=s.offsetTop-200)c=s.id});nls.forEach(l=>{l.classList.remove('active');if(l.getAttribute('href')==='#'+c)l.classList.add('active')})}
+window.addEventListener('scroll',uNav);
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');x.target.querySelectorAll('.sbf').forEach(b=>b.classList.add('an'))}})},{threshold:0.1});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+document.getElementById('mb').addEventListener('click',()=>document.getElementById('mm').classList.toggle('hidden'));
+document.getElementById('mm').querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mm').classList.add('hidden')));
+function mkPt(id,n=15){const c=document.getElementById(id);if(!c)return;for(let i=0;i<n;i++){const p=document.createElement('div');p.className='pt';p.style.left=Math.random()*100+'%';p.style.bottom='-10px';const s=(Math.random()*3+2)+'px';p.style.width=s;p.style.height=s;p.style.animationDuration=(Math.random()*10+8)+'s';p.style.animationDelay=(Math.random()*10)+'s';p.style.opacity=Math.random()*0.5+0.2;c.appendChild(p)}}
+mkPt('ptc',20);
+document.getElementById('igi').addEventListener('input',function(){const u=this.value.trim().replace('@','').replace(/\s/g,'');if(u)document.getElementById('igld').textContent='instagram.com/'+u});
+document.getElementById('igi').addEventListener('keydown',function(e){if(e.key==='Enter')upIG()});
+setTimeout(()=>lucide.createIcons(),500);
+</script>
+</body>
+</html>
